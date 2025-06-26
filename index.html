@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Housie Multiplayer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>🎉 Housie Multiplayer</h1>
+    <div id="room-section">
+      <input id="name" placeholder="Your Name" />
+      <input id="room" placeholder="Room Code or leave blank to create" />
+      <button onclick="join()">Join Game</button>
+    </div>
+    <div id="game-section" style="display:none;">
+      <h2 id="room-code-display"></h2>
+      <div id="ticket"></div>
+      <button onclick="call()">Call Number</button>
+      <div id="called-numbers"></div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
